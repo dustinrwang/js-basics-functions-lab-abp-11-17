@@ -16,38 +16,7 @@ function distanceFromHqInFeet(location) {
 }
 
 function distanceTravelledInFeet(start, end) {
-  const distance = end - start;
-  if (distance > 0) {
+  let distance;
+(end - start>0) ? distance=end-start : distance=start-end;  
     return distance * 264;
-  } else {
-  if (distance <0) {
-    return distance * -264;
   }
-}
-}
-
-function calculatesFarePrice(start, end) {
-  const distance2 = end - start;
-  if (distance2 < 400) {
-    return 0;
-  } else (distance2<2000) {
-    distance * 0.02;}
-    else (distance2<2500) {
-      return 25;
-    } else {
-    return 'cannot travel that far';
-    }
-}
-
-/**function calculatesFarePrice(start, end) {
-  if (distanceTravelledInFeet(start, end) <= 400) {
-    return 0;
-  } else if (distanceTravelledInFeet(start, end) > 400 && distanceTravelledInFeet(start, end) < 2000) {
-    return distanceTravelledInFeet() * 0.02;
-  } else if (distanceTravelledInFeet() > 2000 && distanceTravelledInFeet() < 2500) {
-    return 25;
-  } else {
-    return 'cannot travel that far';
-  }
-  }
-*/
